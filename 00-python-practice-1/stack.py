@@ -21,9 +21,10 @@ class Stack:
     def pop(self):
         ''' Method to pop an item from the top of a Stack '''
         assert not self.is_empty(), "Cannot pop from an empty stack"
+        popItem = self._top.item
         self._top = self._top.next
         self._size -= 1    
-        return (self._top.item)
+        return popItem
         
     def __len__(self):
         ''' Overrides the Python len() method for Stack objects'''
